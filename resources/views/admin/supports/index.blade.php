@@ -1,6 +1,6 @@
-<h1>Listagem dos dúvidas</h1>
+<h1>Listagem dos suportes</h1>
 
-<a href="{{ route ('supports.create') }}">Criar dúvida</a>
+<a href="{{ route ('supports.create') }}">Criar suporte</a>
 
 
 
@@ -17,7 +17,10 @@
             <td>{{ $support->subject }}</td>
             <td>{{ $support->status }}</td>
             <td>{{ $support->body }}</td>
-            <td> > </td>
+            <td>
+               <a href="{{ route('supports.show', $support->id) }}">Ir</a> 
+               <a href="{{ route('supports.edit', $support->id) }}">Editar</a> 
+            </td>
 
          </tr>
 
