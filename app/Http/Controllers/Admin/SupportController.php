@@ -51,6 +51,7 @@ class SupportController extends Controller
         }
 
         return view('admin/supports.edit', compact('support'));
+        
     }
 
     public function update(Request $request, Support $support, string $id)
