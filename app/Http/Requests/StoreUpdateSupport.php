@@ -30,7 +30,7 @@ class StoreUpdateSupport extends FormRequest
                 'required',
                 'min:3',
                 'max:100000'
-            ], 
+            ],
         ];
 
         if ($this->method() === 'PUT') {
@@ -39,7 +39,7 @@ class StoreUpdateSupport extends FormRequest
                 'min:3',
                 'max:255',
                 //"unique:supports, subject, {$this->id}, id"
-                Rule::unique('supports')->ignore($this->id)
+                Rule::unique('supports')->ignore($this->support ?? $this->id)
             ];
         }
 
